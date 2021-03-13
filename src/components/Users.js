@@ -28,24 +28,24 @@ export default function Users() {
         <table>
           <tbody>
             <tr>
-              <td>Title FirstName LastName</td>
+              <td colSpan="4" className="tablehead">Title FirstName LastName</td>
             </tr>
             <tr>
-              <td>
+              <td colSpan="1" rowSpan="2">
                 <img src="https://randomuser.me/api/portraits/women/85.jpg"></img>
               </td>
-              <td>
-                <tr>Username</tr>
-                <tr>Address</tr>
-              </td>
+              <td colSpan="7">Username</td>
             </tr>
             <tr>
-              <td>Email</td>
-              <td>srl@gmail.com</td>
+              <td colSpan="7">Address</td>
             </tr>
             <tr>
-              <td>Phone</td>
-              <td>9666311153</td>
+              <td colSpan="1">Email</td>
+              <td colspan="3">srl@gmail.com</td>
+            </tr>
+            <tr>
+              <td >Phone</td>
+              <td colSpan="3">9666311153</td>
             </tr>
           </tbody>
         </table>

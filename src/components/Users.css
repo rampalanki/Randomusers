@@ -25,6 +25,7 @@ button {
 .table {
   display: flex;
   flex-direction: column;
+  margin: 5px 50px;
 }
 
 .table label {
@@ -62,4 +63,8 @@ img:hover {
 .contentLabel{
     font-weight: bold;
     font-size: 20px;
+}
+
+.tablehead{
+    text-align: left;
 }
