@@ -8,26 +8,39 @@ export default function Users() {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
   const [viewmore, setViewmore] = useState(false);
+
+   /**
+         * @description fetch data from Randomusers API
+         * @returns {Array}
+         */
   useEffect(() => {
     commonUtils.getUsers().then((response) => {
       setUsers(response.results);
     });
   }, []);
 
+          /**
+         * @param {Array} user User details as array of objects.
+         * @returns {Array}
+         */
   const previewUser=(user)=>{
     setUser(user)
   }
-
+  
+  
   return (
     <div className="Container">
       <div className="header">
-        <h1>The future of your business relies on being informed</h1>
-        <button className="quotebutton">Request a quote</button>
+        <div className="data">
+          <h1>The future of your business relies on being informed</h1>
+          <button className="quotebutton">Request a quote</button>
+        </div>
       </div>
       <div className="content">
         <label className="contentLabel">or contact representative below</label>
         <div className="thumblayout">
         {users && users.length
+        // viewmore flag decides number of thumbnails to be shown
           ? !viewmore ?
           users.slice(0,4).map((user,index) => {
               return (
