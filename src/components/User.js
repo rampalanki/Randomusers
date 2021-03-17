@@ -7,10 +7,12 @@ const User = (props) => {
       <label>You are viewing:</label>
       <table>
         <tbody>
-          <tr></tr>
+          <tr>
+            <td colSpan="2" style={{textAlign:'left'}}>{user.name.title} {user.name.first} {user.name.last}</td>
+          </tr>
           <tr>
             <td colSpan="1" rowSpan="2">
-              <img alt="profile" src={user.picture.thumbnail}></img>
+              <img alt="profile" className="displayimage" src={user.picture.large}></img>
             </td>
             <td colSpan="1">{`${user.login.username}`}</td>
           </tr>
