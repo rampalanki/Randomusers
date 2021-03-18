@@ -1,6 +1,5 @@
 .Container {
   height: 100%;
-  width: 90%;
   text-align: center;
   margin: 20px 30px;
   background-color: #ddd;
@@ -35,9 +34,8 @@
 button {
   margin: 20px 20px;
 }
-
-.table label {
-  align-self: flex-start;
+.tablelabel{
+ text-align: left;
 }
 table {
   border-collapse: collapse;
@@ -57,7 +55,6 @@ td {
   border: 1px solid black;
   border-radius: 4px;
   padding: 5px;
-  width: 70px;
 }
 
 .displayimage {
@@ -65,6 +62,8 @@ td {
   border-radius: 4px;
   padding: 5px;
   width: 200px;
+  max-width: 100%;
+    height: auto;
 }
 
 .displayimage:hover {
@@ -91,5 +90,7 @@ td {
 @media (min-width:268px) and (max-width:820px) {
   .displayimage {
     width:35px;
+    max-width: 100%;
+    height: auto;
   }
 }

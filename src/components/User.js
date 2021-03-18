@@ -4,17 +4,16 @@ import "./Users.css";
 const User = (props) => {
   const { user } = props;
   return (
-    <div className="table">
-      <label>You are viewing:</label>
-      <table style={{marginTop:'8rem'}} class="table">
+    <div>
+      <label className="tablelabel">You are viewing:</label>
+      <table  class="table">
     <tbody>
       <tr>
         <td colSpan="2" style={{textAlign: 'left'}}>{user.name.title} {user.name.first} {user.name.last}</td>
       </tr>
       <tr>
         <td colSpan="1" rowSpan="2">
-          <img alt="profile" className="displayimage" style={{maxWidth: '100%',
-          height: 'auto'}} src={user.picture.large} />
+          <img alt="profile" className="displayimage" src={user.picture.large} />
         </td>
         <td colSpan="1">{`${user.login.username}`}</td>
       </tr>

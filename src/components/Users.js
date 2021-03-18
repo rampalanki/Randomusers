@@ -4,7 +4,7 @@ import commonUtils from "../utils/ApiCalls.js";
 import User from "./User"
 
 export default function Users() {
-
+  
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
   const [viewmore, setViewmore] = useState(false);
@@ -42,7 +42,7 @@ export default function Users() {
         {users && users.length
         // viewmore flag decides number of thumbnails to be shown
           ? !viewmore ?
-          users.slice(0,4).map((user,index) => {
+          users.slice(0,8).map((user,index) => {
               return (
                 <div key={index} >
                   <img alt="profile" className="thumbimage" src={user.picture.thumbnail} onClick={()=>previewUser(user)} />
@@ -58,7 +58,7 @@ export default function Users() {
             })
           : null}
           </div>
-        <button className="contentButton" onClick={()=>setViewmore(true)}>{"VIEW MORE >"}</button>
+        { !viewmore && users && users.length>8 ? <button className="contentButton" onClick={()=>setViewmore(true)}>{"VIEW MORE >"}</button> : null }
         {
           Object.keys(user).length>0 && <User user={user}/>
         }
